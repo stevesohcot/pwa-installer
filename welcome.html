@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>App Homepage</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="manifest" href="manifest.json">
+		<link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
+		<meta name="theme-color" content="#2563EB">
+
+	</head>
+	<body>
+		
+		<noscript>
+			<p>Please enable JavaScript to use this app.</p>
+		</noscript>
+		<script>
+			// If opened in a browser (not as an installed PWA), send to the install page
+			var isStandalone = window.navigator.standalone ||
+				window.matchMedia('(display-mode: standalone)').matches;
+			if (!isStandalone) window.location.replace('install.html');
+		</script>
+
+
+		<h1>Welcome to the app</h1>
+	</body>
+</html>

@@ -1,0 +1,359 @@
+/* =====================
+   PWA Installation
+   ===================== */
+
+:root {
+    --brand-color: #2563EB;
+}
+
+/* --- Base --- */
+
+body {
+    background-color: #EFF6FF;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+
+/* --- Landing Page --- */
+
+#pwa-landing {
+    background: white;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#pwa-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+#pwa-app-name {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 16px;
+}
+
+/* --- Bottom Sheet Wrapper (fixed overlay) --- */
+
+#pwa-sheet-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+#pwa-sheet-wrapper.open {
+    pointer-events: all;
+}
+
+
+/* --- Backdrop --- */
+
+#pwa-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+#pwa-sheet-wrapper.open #pwa-backdrop {
+    opacity: 1;
+}
+
+
+/* --- Bottom Sheet --- */
+
+#pwa-bottom-sheet {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: min(97%, 480px);
+    background: white;
+    border-radius: 20px 20px 0 0;
+    max-height: 85vh;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    /* Respect the iPhone home indicator */
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+#pwa-sheet-wrapper.open #pwa-bottom-sheet {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Drag handle bar at top of sheet */
+#pwa-sheet-handle {
+    width: 40px;
+    height: 4px;
+    background: #ddd;
+    border-radius: 2px;
+    margin: 12px auto 4px;
+}
+
+#pwa-sheet-body {
+    padding: 12px 20px 24px;
+}
+
+
+/* --- Sheet close button --- */
+
+#pwa-sheet-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background: #efefef;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #555;
+    padding: 0;
+}
+
+
+/* --- Sheet app info --- */
+
+.pwa-sheet-app-info {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+}
+
+#pwa-sheet-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    margin-right: 14px;
+    flex-shrink: 0;
+}
+
+#pwa-sheet-app-name {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.pwa-divider {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 16px 0;
+}
+
+
+/* --- Instructions --- */
+
+.pwa-instructions {
+    display: none;
+}
+
+.pwa-instructions-step {
+    padding: 8px 0 8px 8px;
+}
+
+.pwa-instructions-step-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.instructions-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
+}
+
+/* Simulated OS button labels */
+.pwa-instructions-add-to-home-screen {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #FAFAFA;
+    border: 1px solid #dadada;
+    padding: 5px 8px;
+    margin: 6px 0;
+    font-weight: 600;
+    white-space: nowrap;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Help me find it / detail container */
+.pwa-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: var(--brand-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    margin: 6px 0;
+}
+
+.pwa-btn-lg {
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    margin: 0;
+}
+
+#pwa-instructions-browser-detail-container {
+    display: none;
+    margin: 10px 8px;
+    text-align: center;
+    background: #FAFAFA;
+    border: 1px solid #dadada;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* --- Browser Mocks --- */
+
+/* Chrome mock — phone frame with status bar + URL bar */
+.browser-mock-chrome {
+    background: #1c1c1e;
+    border-radius: 16px;
+    padding: 8px 10px 10px;
+    margin: 6px auto 14px;
+    max-width: 300px;
+}
+
+.mock-status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 4px 6px;
+}
+
+.mock-status-icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.mock-chrome-url-bar {
+    background: #3a3a3c;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 7px 10px;
+    gap: 8px;
+}
+
+.pwa-mock-url {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mock-chrome-url-bar .pwa-mock-url {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    color: #ececec;
+}
+
+/* Safari mock — URL bar + bottom toolbar */
+.browser-mock-safari {
+    background: #f2f0e6;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 6px auto 6px;
+    max-width: 320px;
+    border: 1px solid #ddd;
+}
+
+.mock-safari-url-bar {
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mock-safari-aa {
+    font-size: 12px;
+    color: #333;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.mock-safari-url-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #333;
+    overflow: hidden;
+}
+
+
+.mock-safari-refresh {
+    font-size: 18px;
+    color: #333;
+}
+
+.mock-safari-toolbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 4px;
+}
+
+.mock-safari-toolbar-item {
+    color: #007AFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 36px;
+    font-size: 22px;
+}
+
+.mock-safari-disabled {
+    color: #ccc;
+}
+
+/* Red highlight box around the share button */
+.mock-share-highlighted {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2.5px solid #e00;
+    border-radius: 5px;
+    padding: 2px;
+    color: #007AFF;
+}
+
+#android-add-to-home-screen {
+    display: none;
+}
