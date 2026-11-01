@@ -230,6 +230,12 @@ body {
     border-radius: 5px;
 }
 
+/* "Example in ..." labels above each browser mock */
+#pwa-instructions-browser-detail-container small {
+    display: block;
+    margin-top: 20px;
+}
+
 /* --- Browser Mocks --- */
 
 /* Chrome mock — phone frame with status bar + URL bar */
@@ -279,68 +285,60 @@ body {
     color: #ececec;
 }
 
-/* Safari mock — URL bar + bottom toolbar */
+/* Safari mock — "More" popup menu */
 .browser-mock-safari {
-    background: #f2f0e6;
-    border-radius: 12px;
+    background: #fff;
+    border-radius: 22px;
     overflow: hidden;
     margin: 6px auto 6px;
-    max-width: 320px;
-    border: 1px solid #ddd;
+    max-width: 260px;
+    padding-top: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    color: #1c1c1e;
+    text-align: left;
 }
 
-.mock-safari-url-bar {
-    background: white;
+.mock-safari-menu-item {
     display: flex;
     align-items: center;
+    gap: 14px;
+    padding: 10px 20px;
+    font-size: 17px;
+}
+
+.mock-safari-menu-item svg {
+    flex-shrink: 0;
+}
+
+/* Red highlight box around the Share menu item */
+.mock-safari-menu-highlighted {
+    border: 2.5px solid #e00;
+    border-radius: 8px;
+    margin: 0 8px;
     padding: 8px 12px;
-    gap: 10px;
-    border-bottom: 1px solid #e0e0e0;
 }
 
-.mock-safari-aa {
-    font-size: 12px;
-    color: #333;
-    font-weight: 600;
-    white-space: nowrap;
+.mock-safari-menu-divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 6px 20px;
 }
 
-.mock-safari-url-center {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    font-size: 13px;
-    color: #333;
-    overflow: hidden;
-}
-
-
-.mock-safari-refresh {
-    font-size: 18px;
-    color: #333;
-}
-
-.mock-safari-toolbar {
+.mock-safari-menu-footer {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    padding: 8px 4px;
+    background: #f2f2f7;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 8px;
+    padding: 12px 8px;
 }
 
-.mock-safari-toolbar-item {
-    color: #007AFF;
+.mock-safari-menu-footer-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 36px;
-    font-size: 22px;
-}
-
-.mock-safari-disabled {
-    color: #ccc;
+    gap: 4px;
+    font-size: 13px;
 }
 
 /* Red highlight box around the share button */

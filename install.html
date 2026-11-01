@@ -66,6 +66,10 @@
 
 					<div id="pwa-instructions-browser-detail-container">
 
+						Tap "More"
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle"><circle cx="12" cy="12" r="10"/><circle cx="7.5" cy="12" r="1.25" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.25" fill="currentColor" stroke="none"/><circle cx="16.5" cy="12" r="1.25" fill="currentColor" stroke="none"/></svg>
+						button if you don't see it.
+
 						<small>Example in Chrome:</small>
 						<div class="browser-mock-chrome">
 							<div class="mock-status-bar">
@@ -86,26 +90,36 @@
 
 						<small>Example in Safari:</small>
 						<div class="browser-mock-safari">
-							<div class="mock-safari-url-bar">
-								<span class="mock-safari-aa">AA</span>
-								<div class="mock-safari-url-center">
-									<svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 13" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="5.5" width="8" height="7" rx="1.5" fill="#555" stroke="none"/><path d="M3 5.5V4a2 2 0 0 1 4 0v1.5"/></svg>
-									<span class="pwa-mock-url"></span>
-								</div>
-								<span class="mock-safari-refresh">↻</span>
+							<div class="mock-safari-menu-item mock-safari-menu-highlighted">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="15" x2="12" y2="3"/><polyline points="8 7 12 3 16 7"/><path d="M8 10H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-2"/></svg>
+								<span>Share</span>
 							</div>
-							<div class="mock-safari-toolbar">
-								<span class="mock-safari-toolbar-item">&#8249;</span>
-								<span class="mock-safari-toolbar-item mock-safari-disabled">&#8250;</span>
-								<span class="mock-safari-toolbar-item mock-share-highlighted">
-									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="5"/><polyline points="8 9 12 5 16 9"/><path d="M8 13H6a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2h-2"/></svg>
-								</span>
-								<span class="mock-safari-toolbar-item">
-									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-								</span>
-								<span class="mock-safari-toolbar-item">
-									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="15" height="15" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-2"/></svg>
-								</span>
+							<div class="mock-safari-menu-item">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-6-5-6 5z"/></svg>
+								<span>Add to Favorites</span>
+							</div>
+							<div class="mock-safari-menu-item">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg>
+								<span>Add Bookmark to...</span>
+							</div>
+							<div class="mock-safari-menu-divider"></div>
+							<div class="mock-safari-menu-item">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+								<span>New Tab</span>
+							</div>
+							<div class="mock-safari-menu-item">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-6-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+								<span>New Private Tab</span>
+							</div>
+							<div class="mock-safari-menu-footer">
+								<div class="mock-safari-menu-footer-item">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M1 4.5C1 4 1.4 3.6 2 3.6c3.5 0 6.6.6 9 2.4v15c-2.4-1.6-5.5-2.2-9-2.2-.6 0-1-.4-1-1z"/><path d="M23 4.5c0-.5-.4-.9-1-.9-3.5 0-6.6.6-9 2.4v15c2.4-1.6 5.5-2.2 9-2.2.6 0 1-.4 1-1z"/></svg>
+									<span>Bookmarks</span>
+								</div>
+								<div class="mock-safari-menu-footer-item">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3V5a1 1 0 0 0-1-1H4a3 3 0 0 1 3-2z"/><rect x="2" y="6" width="16" height="16" rx="3"/></svg>
+									<span>All Tabs</span>
+								</div>
 							</div>
 						</div>
 
@@ -118,7 +132,11 @@
 						<div class="pwa-instructions-step-content">
 							<span class="pwa-instructions-add-to-home-screen">Add to Home Screen</span>
 						</div>
-						You may have to hit the "More" button
+
+						Tap "More"
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle"><circle cx="12" cy="12" r="10"/><circle cx="7.5" cy="12" r="1.25" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.25" fill="currentColor" stroke="none"/><circle cx="16.5" cy="12" r="1.25" fill="currentColor" stroke="none"/></svg>
+						button if you don't see it.
+
 					</div>
 
 					<div class="pwa-instructions-step">
